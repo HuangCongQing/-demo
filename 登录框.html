@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>雪碧图编程挑战</title>
+    <style>
+    /*CSS Reset*/
+        *{
+            margin:0;
+            padding:0;
+        }
+    /*设置div容器背景颜色，宽度和内边距*/
+        .box{
+            width:190px;
+            background-color:#EBF3FA;
+            /*内边距（上右下左）*/
+            padding:14px 11px;
+        }
+    /*设置表单样式（文本框宽和高，文字缩进，外下边距）*/
+        .textpwd{
+            width:186px;
+            height:36px;
+            /*文字缩进*/
+            text-indent:30px;
+            /*外下边距*/
+            margin-bottom:17px;
+        }
+    /*设置p标签字体（下次自动登录、忘记密码）*/
+        p{
+            font-size:15px;
+            /*隐藏溢出*/
+            overflow:hidden;
+            /*设置外下边距*/
+            margin-bottom:15px;
+        }
+    /*设置单选框外右边距*/
+        p input{
+            margin-right:7px;
+        }
+    /*设置a标签链接（忘记密码）*/
+        p a{
+            /*隐藏下划线*/
+            text-decoration:none;
+            /*设置文字右浮动*/
+            float:right;
+        }
+    /*设置按钮大小*/
+        #login, #register{
+            width:190px;
+            height:37px;
+            border:0;
+            /*设置鼠标指针样式*/
+            cursor:pointer;
+            /*设置按钮背景图片*/
+            background:url(http://img.mukewang.com/539a972b00013e9102280177.jpg);
+        }
+    /*设置注册按钮背景图片*/
+        #register{
+            background:url(http://img.mukewang.com/539a972b00013e9102280177.jpg) 0 -37px;
+        }
+    /*设置分隔线*/
+        hr{
+            /*设置外上边距*/
+            margin-top:18px; 
+            /*设置外下边距*/
+            margin-bottom:18px; 
+            /*设置分隔线颜色*/
+            color:#D1D1D1;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <form>
+            <!--表单1-->
+            <input class="textpwd" type="text" placeholder="邮箱/手机号/用户名"></input>
+            <!--表单2-->
+            <input class="textpwd" type="password" placeholder="请输入密码"></input>
+            <p>
+                <!--单选框-->
+                <input type="checkbox">下次自动登录</input>
+                <a href="javascript:;">忘记密码？</a>
+            </p>
+            <!--登录按钮-->
+            <input id="login" type="button"></input>
+            <!--分隔线-->
+            <hr/>
+            <!--注册按钮-->
+            <input id="register" type="button"></input>
+        </form>
+    </div>
+</body>
+</html>

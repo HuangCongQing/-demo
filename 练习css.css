@@ -1,0 +1,34 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*盒子模型*/
+.mainBox{
+	width:960px;
+	background:#CFF;
+	overflow: hidden;
+}
+.leftBox{
+    width:740px;
+    height:300px;
+	background:#C9F;
+    float:left;}
+.rightBox{
+    width:210px;
+    height:300px;
+    float:right;
+	background:#FCF;
+	
+}
+
+.box1{
+	width:0;
+	height:0;
+	border-top:100px solid #FFF;
+	border-right:100px solid #F00;
+	border-bottom:100px solid #03F;
+	border-left:100px solid #F00;
+	}
+.box2{width:100px;
+	height:200px;
+	border:1px solid #0F0;
+	}

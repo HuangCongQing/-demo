@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>伪类伪元素</title>
+	<style>
+		#selector1 :first-child{
+        color: pink;
+}
+		h2{
+			background: red;
+
+		}
+		h2:after{
+			content: "  我是后面添加的文字";
+			content: url(http://ojmcn9nlw.qnssl.com/blog/20170120/132717168.png);
+		}
+		h2:before{
+			content: "我是前面添加的文字  ";
+		}
+
+	</style>
+</head>
+<body>
+	<div id="selector1">
+        <span>我是第一个span</span>
+        <p>我是第一个p，在span后面</p>
+        <div><p>第二个p</p></div>
+        <p>第三个p</p>
+        <p>第四个p</p>
+        <em>I am em</em>
+        <p>iewnvk</p>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+   		<h2>大家好</h2>
+
+</body>
+</html>

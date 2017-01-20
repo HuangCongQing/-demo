@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>垂直水平居中</title>
+	<style>
+		.wrap1{
+          width: 300px;
+          height: 200px;
+          border: 2px solid #ccc;
+          box-sizing: border-box;
+
+      }
+        .non-child1{
+            border: 1px solid #000;
+            background: green;
+
+        }
+
+
+    .wrap2{
+          width: 300px;
+          height: 200px;
+          border: 2px solid #ccc;
+          box-sizing: border-box;
+      }
+    .span2{
+            background: red;
+        }
+    .center2{
+            text-align: center;
+        }
+
+
+
+    .child3{
+            width: 100px;
+            height: 100px;
+            background: green;
+            box-sizing: border-box;
+        }
+        .auto3{
+            margin:0 auto;
+        }
+   .wrap3{
+          width: 300px;
+          height: 200px;
+          border: 2px solid #ccc;
+          box-sizing: border-box;
+      }
+
+
+   .child4{
+            width: 100px;
+            height: 100px;
+            background: green;
+            box-sizing: border-box;
+        }
+ .padding4{
+            padding-left: 100px;
+        }
+ .wrap4{
+          width: 300px;
+          height: 200px;
+          border: 2px solid #ccc;
+          box-sizing: border-box;
+      }
+
+
+
+ .child5{
+            width: 100px;
+            height: 100px;
+            background: green;
+            box-sizing: border-box;
+        }
+ .margin5{
+            margin-left:100px;
+        }
+ .wrap5{
+          width: 300px;
+          height: 200px;
+          border: 2px solid #ccc;
+          box-sizing: border-box;
+      }
+  
+.relative6{
+            width: 300px;
+            height: 200px;
+            border: 2px solid #ccc;
+            box-sizing: border-box;
+            position: relative;
+        }
+        .absolute6{
+            position: absolute;
+            left:50%;
+            margin-left:-50px;  /*这里还要设定子元素margin-top为-50是需要消除父元素50%造成的偏移*/
+        }
+   .child6{
+            width: 100px;
+            height: 100px;
+            background: green;
+            box-sizing: border-box;
+        }
+
+
+
+
+
+  .flex7{
+            width: 300px;
+            height: 200px;
+            border: 2px solid #ccc;
+            box-sizing: border-box;
+            display:flex;
+            flex-direction: row;
+            justify-content:center;
+
+        }
+  .child7{
+            width: 100px;
+            height: 100px;
+            background: green;
+            box-sizing: border-box;
+        }
+
+
+  .wrap8{
+            width:200px ;
+            height: 300px;
+            border: 2px solid #ccc;
+            box-sizing: border-box;
+        }
+        .span8{
+            background: red;
+        }
+        .line-height8{
+            line-height: 300px;
+           /* display: table-cell;*/
+           /* vertical-align: middle;*/
+        }
+
+
+
+    .table-cell9{
+            /* height: 100px;*/
+            display: table-cell;
+            vertical-align: middle;
+        }
+    .non-height9{
+            background: green;
+        }
+    .wrap9{
+            width:200px ;
+            height: 300px;
+            border: 2px solid #ccc;
+            box-sizing: border-box;
+        }
+
+
+
+
+     .wrap10{
+            width:200px ;
+            height: 300px;
+            border: 2px solid #ccc;
+            box-sizing: border-box;
+        }
+.non-height10{
+            background: green;
+        }
+ .flex10{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+
+
+
+ .wrap11{
+            width:200px ;
+            height: 300px;
+            border: 2px solid #ccc;
+            box-sizing: border-box;
+        }
+.div111{
+            width:100px ;
+            height: 100px;
+            box-sizing: border-box;
+            background: pink;
+        }
+        .margin11{
+          margin-top: 100px;
+        }
+
+
+
+
+
+.wrap12{
+            width:200px ;
+            height: 300px;
+            border: 2px solid #ccc;
+            box-sizing: border-box;
+        }
+ .padding12{
+            padding-top: 100px;
+        }
+.div112{
+            width:100px ;
+            height: 100px;
+            box-sizing: border-box;
+            background: pink;
+        }
+
+
+ .relative13{
+            position: relative;
+        }
+        .absolute13{
+            position: absolute;
+            top:50%;
+            margin-top: -50px;
+        }
+.wrap13{
+            width:200px ;
+            height: 300px;
+            border: 2px solid #ccc;
+            box-sizing: border-box;
+        }
+.div113{
+            width:100px ;
+            height: 100px;
+            box-sizing: border-box;
+            background: pink;
+        }
+
+
+
+
+.flex14{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+.wrap14{
+            width:200px ;
+            height: 300px;
+            border: 2px solid #ccc;
+            box-sizing: border-box;
+        }
+.div114{
+            width:100px ;
+            height: 100px;
+            box-sizing: border-box;
+            background: pink;
+        }
+
+	</style>
+</head>
+
+<body>
+
+<!-- 场景1：子元素是块级元素且宽度没有设定 -->
+	<div class="wrap1">
+   <div class="non-child1"> 
+      它会充满整个父级元素的宽度，即在水平位置上宽度和父元素一致
+   </div>
+</div>
+
+
+<!-- 子元素是行内元素，子元素宽度是由其内容撑开的
+ -->
+ <div class="wrap2 center2">
+    <span class="span2">场景2：子元素是行内元素，子元素宽度是由其内容撑开的</span>   <!-- 有无span都一样 -->
+</div>
+
+<!-- 解法1：给子元素添加margin:0 auto; -->
+<div class="wrap3">
+    <div class="child3 auto3">
+        解法一 给子元素添加margin:0 auto
+    </div>
+</div>
+
+<!-- 通过计算指定父元素的padding-left或padding-right
+ -->
+<div class="wrap4 padding4">
+    <div class="child4 ">
+        解法二 通过计算指定父元素的padding-left或padding-right
+    </div>
+</div>
+
+<!-- 计算得到子元素的margin-left或margin-right
+ --><div class="wrap5">
+    <div class="child5 margin5">
+        解法三 计算得到子元素的margin-left或margin-right
+    </div>
+</div>
+
+
+<!-- 通过子元素相对父元素绝对定位
+ -->
+ <div class="relative6">
+    <div class="child6 absolute6">
+        解法四 通过子元素相对父元素绝对定位
+    </div>
+</div>
+
+
+<!-- 利用flex-box
+ -->
+<div class="flex7">
+    <div class="child7 ">
+        解法五 flex-box
+    </div>
+</div>
+
+
+
+
+<!-- 接下来就是垂直居中
+ -->
+
+
+<!-- 场景1：子元素是行内元素，高度是由其内容撑开的
+这种情况下，需要通过设定父元素的line-height为其高度来使得子元素垂直居中
+ -->
+
+<div class="wrap8 line-height8">
+    <span class="span8">场景一 设定父元素的line-height</span>
+</div>
+
+<!-- 场景2：子元素是块级元素但是子元素高度没有设定，在这种情况下实际上是不知道子元素的高度的，无法通过计算得到padding或margin来调整，但是还是存在一些解法。 -->
+
+<!-- 解法1：通过给父元素设定display:table-cell;vertical-align:middle来解决
+ -->
+<div class="wrap9 table-cell9">
+    <div class="non-height9 ">
+    解法1display:table-cell;vertical-align:middle</div>
+</div>
+
+<!-- 解法2：flexbox
+ -->
+<div class="wrap10 flex10">
+    <div class="non-height10 ">
+    解法二display: flex;
+    flex-direction: column;
+    justify-content: center;</div>
+</div>
+
+
+<!-- 场景3：子元素是块级元素且高度已经设定
+ -->
+
+
+
+<!-- 解法1：计算子元素的margin-top或margin-bottom，计算方法为父(元素高度-子元素高度)/2 -->
+<div class="wrap11 ">
+    <div class="div111 margin11">解法一：子元素的margin</div>
+</div>
+
+<!-- 解法2：计算父元素的padding-top或padding-bottom，计算方法为(父元素高度-子元素高度)/2 -->
+<div class="wrap12  padding12">
+    <div class="div112 ">解法二：父元素的padding</div>
+</div>
+
+
+
+
+<!-- 解法3：利用绝对定位，让子元素相对于父元素绝对定位 -->
+
+<div class="wrap13  relative13">
+    <div class="div113 absolute13">解法三：绝对定位</div>
+</div>
+
+<!-- 解法4：利用flexbox -->
+<div class="wrap14  flex14">
+    <div class="div114 ">解法四：flexbox</div>
+</div>
+
+</body>
+</html>

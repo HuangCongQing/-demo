@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>padding实现鱼眼和三道杠效果</title>
+	<style>
+	.margin{
+		margin-right: auto;
+		margin-left: auto;
+	}
+	.line-tri{
+		width: 150px;
+		height: 30px;
+		padding:15px 0 ;
+		border-bottom: 30px solid;
+		border-top: 30px solid;
+		background-color: currentColor;
+		background-clip: content-box;
+
+		}
+	.eye{
+		width: 150px;
+		height: 150px;
+		padding:10px;
+		border:10px solid;
+		border-radius: 50%;
+		background-color: currentColor;
+		background-clip: content-box;
+	}
+	</style>
+</head>
+<body>
+	<div class=" margin line-tri"></div>
+	<div class="margin eye"></div>
+</body>
+</html>

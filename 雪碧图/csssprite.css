@@ -1,0 +1,55 @@
+ul{
+	list-style: none;
+}
+h3, ul{
+	padding: 0;
+	margin: 0;
+}
+li h3{
+	font-size: 14px;
+	font-weight: 400;
+}
+li{
+	display: block;
+	height: 31px;
+	line-height: 31px;
+	overflow: hidden;
+	border-bottom: 1px solid #dedede;
+}
+li i{
+	background: url(sidebar.png);
+	display: inline;
+	width: 30px;
+	height: 24px;
+	float: left;
+	margin:3px 10px 0 0;
+}
+.sprite{
+	width: 150px;
+	background-color: #f8f8f8;
+	border:1px solid #bbb;
+}
+.cat_1 i{
+	background-position: 0 0;/*position一定要加*/
+}
+.cat_2 i{
+	background-position: 0 -24px;
+}
+.cat_3 i{
+	background-position: 0 0;
+}
+.cat_4 i{
+	background-position: 0 -24px;
+}
+.cat_5 i{
+	background-position: 0 -48px;
+}
+.cat_6 i{
+	background-position: 0 -72px;
+}
+.cat_7 i{
+	background-position: 0 -96px;
+}
+.cat_8 i{
+	background-position: 0 -120px;
+}
