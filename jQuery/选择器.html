@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery选择器</title>
+	<!-- <script src="http://code.jquery.com/jquery-1.11.3.js">
+	</script> -->
+	<script src="./jquery.js"></script>
+	<style>
+		div,span,p{
+			width: 140px;
+			height: 140px;
+			margin: 5px;
+			background: #aaa;
+			border: 1px solid #000;
+			float: left;
+			font-size: 17px;
+			font-family: Verdana;
+		}
+		div.mini {
+			width: 55px;
+			height: 55px;
+			background: #aaa;
+			font-size: 12px;
+		}
+		div.hide{
+			display: none;
+		}
+	</style>
+	<script>
+		$(function(){
+		//基本选择器
+			// $("#one").css("background","red");
+			// $(".mini").css("background","pink");
+			// $("div").css("background","green");
+			// 改变所有元素的背景色
+			//$("*").css("background","#bbffaa");
+			//改变所有span元素和id为two的元素的背景色
+			// $("span, #two").css("background","#bbffaa");
+		//层次选择器
+			// $("body div").css("background","red");
+			// // $("body>div").css("background","red");
+			// $("#one").next("div").css("background","red");
+			//$("#one").nextAll("div").css("background","red");
+		//过滤选择器
+			  // $("div:first").css("background","#bbffaa");
+			  // $("div:last").css("background","red");
+			  // $("div:not(.one)").css("background","#bbffaa");
+			  // $("div:even").css("background","#bbffaa");
+			  // $("div:odd").css("background","#bbffaa");
+			  // $("div:eq(3)").css("background","#bbffaa");
+			  // $("div:gt(3)").css("background","red");
+			  // $(":header").css("background","red");
+			  // $(":animated").css("background","red");
+			  // $(":focus").css("background","red");
+
+			  // $(":animated").css("background","red");
+			   // $("div:hidden").show(3000);
+				// $("div[title]").css("background","red");
+				// $("div[title=test]").css("background","red");
+
+				// $("div.one:nth-child(2)").css("background","red");
+				$("div.one :first-child").css("background","red");
+
+
+
+
+
+
+
+
+
+	});
+		
+	</script>
+</head>
+<body>
+	<div class="one"id="one">
+		id为one,class为one的div
+		<div class="mini">class为mini</div>
+	</div>
+	<div class="one" id="two" title="test">
+		id为two，class为one，title为test的div
+		<div class="mini" title="other">class为mini，title为other</div>
+		<div class="mini" title="test">class为mini，title为test</div>
+	</div>
+	<div class="one">
+		<div class="mini">class位mini</div>
+		<div class="mini">class位mini</div>
+		<div class="mini">class位mini</div>
+		<div class="mini"></div>
+	</div>
+	<div class="one">
+		<div class="mini">class位mini</div>
+		<div class="mini">class位mini</div>
+		<div class="mini">class位mini</div>
+		<div class="mini" title="tesst">class为mini，title为tesst</div>
+	</div>
+	<div style = "display: none;" class="none">
+		style的display为“none”的div
+	</div>
+	<div class="hide">class为hide的div</div>
+	<div>
+		包含input的type为“hidden”的div<input type="hidden" size="8" />
+	</div>
+	<span class="mover">正在执行动画的span元素</span>
+
+</body>
+</html>
