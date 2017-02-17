@@ -15,7 +15,10 @@ div{ text-align:center; line-height:50px}
 .footer{ height:50px; background:#9F9; clear:both}
 </style>
 </head>
-
+<!-- 这里是一个排版陷阱：当main里面设置了左右两个div之后，这个时候不要忘记给main也设置和左右div一样的高度，题中的main是没有设置高度的，只设置了宽度，这个时候我们可以想象main其实就是一根高度为0的线条浮在top的下面，只是我们看不到，因为它没有高度。而footer是浮在main下面的，并不是浮在左右两个div下面，所以我们看到footer块莫名其妙跑上来盖住了左右两个div，解决办法如下：
+第一，给main赋予和左右div同样大小的高度，这个是最直接的方法，main的高度从0变成600px之后，自然把以它为参照、浮在它屁股下面的footer压到下面去了；
+第二，把footer的浮动清除掉，使用clear：both，这样footer从一个跟着main浮起来的飞行物变成了失去翅膀的元素，不能浮动，它就只能自动找最长的参照物（也就是很长的左右div），然后折行显示在底部了，一样能达到效果。
+如果还不懂，可以将main的高度设置为height：300px，就一目了然了，因为这个时候main变成了300px，而footer会跟着main低300px显示在top下面。我们看不到main，不代表它不存在。 -->
 <body>
 <div class="head">head</div>
 <div class="main">
